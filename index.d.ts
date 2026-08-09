@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,21 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var Uint64Array = require( '@stdlib/array-uint64' );
-var constructorName = require( '@stdlib/utils-constructor-name' );
-
-
-// MAIN //
+import { Uint64Array } from '@stdlib/types/array';
 
 /**
 * Tests if a value is a Uint64Array.
 *
-* @param {*} value - value to test
-* @returns {boolean} boolean indicating whether value is a Uint64Array
+* @param value - value to test
+* @returns boolean indicating whether value is a Uint64Array
 *
 * @example
 * var Uint64Array = require( '@stdlib/array-uint64' );
@@ -42,14 +38,9 @@ var constructorName = require( '@stdlib/utils-constructor-name' );
 * var bool = isUint64Array( [] );
 * // returns false
 */
-function isUint64Array( value ) {
-	return (
-		value instanceof Uint64Array ||
-		constructorName( value ) === 'Uint64Array'
-	);
-}
+declare function isUint64Array( value: any ): value is Uint64Array;
 
 
 // EXPORTS //
 
-module.exports = isUint64Array;
+export = isUint64Array;
